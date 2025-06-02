@@ -12,11 +12,25 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
+// Function to check if device is mobile
+function isMobileDevice() {
+  return typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light")
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    // If it's a mobile device, always use light theme
+    if (isMobileDevice()) {
+      setTheme("light")
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light")
+      setMounted(true)
+      return
+    }
+
     const savedTheme = localStorage.getItem("theme") as Theme
     // Default to light theme, only use dark if explicitly saved
     const initialTheme = savedTheme || "light"
@@ -33,6 +47,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   const toggleTheme = () => {
+    // If it's a mobile device, don't allow theme toggle
+    if (isMobileDevice()) {
+      return
+    }
+
     const newTheme = theme === "light" ? "dark" : "light"
     setTheme(newTheme)
     localStorage.setItem("theme", newTheme)
