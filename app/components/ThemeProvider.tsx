@@ -21,29 +21,56 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light")
   const [mounted, setMounted] = useState(false)
 
-  useEffect(() => {
-    // If it's a mobile device, always use light theme
+  // Function to force light theme on mobile
+  const forceLightThemeOnMobile = () => {
     if (isMobileDevice()) {
       setTheme("light")
       document.documentElement.classList.remove("dark")
+      document.documentElement.style.colorScheme = "light"
       localStorage.setItem("theme", "light")
-      setMounted(true)
-      return
+    }
+  }
+
+  useEffect(() => {
+    // Add listener for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = () => forceLightThemeOnMobile()
+    mediaQuery.addEventListener('change', handleChange)
+
+    // Initial setup
+    if (isMobileDevice()) {
+      forceLightThemeOnMobile()
+    } else {
+      const savedTheme = localStorage.getItem("theme") as Theme
+      const initialTheme = savedTheme || "light"
+      setTheme(initialTheme)
+
+      if (initialTheme === "dark") {
+        document.documentElement.classList.add("dark")
+      } else {
+        document.documentElement.classList.remove("dark")
+      }
     }
 
-    const savedTheme = localStorage.getItem("theme") as Theme
-    // Default to light theme, only use dark if explicitly saved
-    const initialTheme = savedTheme || "light"
-
-    setTheme(initialTheme)
     setMounted(true)
 
-    // Apply theme to document
-    if (initialTheme === "dark") {
-      document.documentElement.classList.add("dark")
-    } else {
-      document.documentElement.classList.remove("dark")
+    // Cleanup
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange)
     }
+  }, [])
+
+  // Add listener for mobile breakpoint changes
+  useEffect(() => {
+    const mobileMediaQuery = window.matchMedia('(max-width: 768px)')
+    const handleMobileChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        forceLightThemeOnMobile()
+      }
+    }
+    
+    mobileMediaQuery.addEventListener('change', handleMobileChange)
+    return () => mobileMediaQuery.removeEventListener('change', handleMobileChange)
   }, [])
 
   const toggleTheme = () => {
