@@ -3,18 +3,14 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, Code, User, Briefcase, Mail, Moon, Sun, FileText, MessageSquare } from "lucide-react"
-import { useTheme } from "./ThemeProvider"
+import { Menu, X, Code, User, Briefcase, Mail, FileText, MessageSquare } from "lucide-react"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [mounted, setMounted] = useState(false)
   const pathname = usePathname()
-  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true)
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
@@ -35,8 +31,8 @@ export default function Navigation() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-200 dark:border-gray-700"
-          : "bg-transparent"
+          ? "bg-white shadow-lg border-b border-gray-200"
+          : "bg-white/80 backdrop-blur-sm"
       }`}
     >
       <div className="container-custom">
@@ -56,7 +52,7 @@ export default function Navigation() {
                   className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                     pathname === item.href
                       ? "bg-uiuc-orange text-white"
-                      : "text-gray-700 dark:text-gray-300 hover:text-uiuc-orange hover:bg-gray-100 dark:hover:bg-gray-800"
+                      : "text-gray-700 hover:text-uiuc-orange hover:bg-gray-100"
                   }`}
                 >
                   <Icon size={18} />
@@ -64,32 +60,12 @@ export default function Navigation() {
                 </Link>
               )
             })}
-
-            {/* Theme Toggle */}
-            {mounted && (
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-              </button>
-            )}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-2">
-            {mounted && (
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-              </button>
-            )}
             <button
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-700"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -99,7 +75,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 py-4">
+          <div className="lg:hidden bg-white border-t border-gray-200 py-4">
             {navItems.map((item) => {
               const Icon = item.icon
               return (
@@ -109,7 +85,7 @@ export default function Navigation() {
                   className={`flex items-center space-x-3 px-4 py-3 transition-all duration-300 ${
                     pathname === item.href
                       ? "bg-uiuc-orange text-white"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                      : "text-gray-700 hover:bg-gray-100"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

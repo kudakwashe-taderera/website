@@ -62,6 +62,7 @@ export default function AboutPage() {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 About <span className="gradient-text">Kudakwashe</span>
               </h1>
+              <h2 className="text-2xl text-uiuc-orange mb-6">Founder of NeXTStep</h2>
               <p className="text-xl text-gray-600 mb-8">
                 A passionate technopreneur and full stack software engineer dedicated to building scalable systems that
                 empower education, career growth, and innovation.
