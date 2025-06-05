@@ -2,10 +2,10 @@ export default function TermsPage() {
   return (
     <div className="pt-20 pb-16">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Terms of Service</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
         
-        <div className="prose dark:prose-invert max-w-none">
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600 mb-8">
             Last updated: {new Date().toLocaleDateString()}
           </p>
 

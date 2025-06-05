@@ -50,17 +50,17 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="section-padding bg-gray-50 dark:bg-gray-800">
+    <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">What Clients Say</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Clients Say</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Testimonials from satisfied clients and collaborators who have experienced the quality of my work
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-8 md:p-12 relative">
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative">
             <Quote className="absolute top-6 left-6 text-uiuc-orange opacity-20" size={48} />
 
             <div className="text-center">
@@ -70,7 +70,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
 
-              <blockquote className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+              <blockquote className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
                 "{testimonials[currentTestimonial].text}"
               </blockquote>
 
@@ -81,10 +81,10 @@ export default function TestimonialsSection() {
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div className="text-left">
-                  <div className="font-semibold text-gray-900 dark:text-white">
+                  <div className="font-semibold text-gray-900">
                     {testimonials[currentTestimonial].name}
                   </div>
-                  <div className="text-gray-600 dark:text-gray-400">{testimonials[currentTestimonial].role}</div>
+                  <div className="text-gray-600">{testimonials[currentTestimonial].role}</div>
                   <div className="text-uiuc-orange font-medium">{testimonials[currentTestimonial].company}</div>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function TestimonialsSection() {
             <div className="flex justify-between items-center mt-8">
               <button
                 onClick={prevTestimonial}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft size={24} />
@@ -106,7 +106,7 @@ export default function TestimonialsSection() {
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-colors ${
-                      index === currentTestimonial ? "bg-uiuc-orange" : "bg-gray-300 dark:bg-gray-600"
+                      index === currentTestimonial ? "bg-uiuc-orange" : "bg-gray-300"
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
@@ -115,7 +115,7 @@ export default function TestimonialsSection() {
 
               <button
                 onClick={nextTestimonial}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
                 aria-label="Next testimonial"
               >
                 <ChevronRight size={24} />

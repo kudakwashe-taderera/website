@@ -10,11 +10,11 @@ export default function FutureOfCareerDevelopmentBlog() {
   return (
     <article className="pt-16 blog-content">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom py-8">
           <Link 
             href="/blog"
-            className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-uiuc-orange dark:hover:text-uiuc-orange mb-6"
+            className="inline-flex items-center text-gray-600 hover:text-uiuc-orange mb-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
@@ -24,21 +24,21 @@ export default function FutureOfCareerDevelopmentBlog() {
             <span className="px-3 py-1 bg-uiuc-orange bg-opacity-10 text-uiuc-orange rounded-full text-sm font-medium">
               AI/ML
             </span>
-            <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+            <div className="flex items-center text-gray-500 text-sm">
               <Calendar size={16} className="mr-1" />
               January 4, 2024
             </div>
-            <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+            <div className="flex items-center text-gray-500 text-sm">
               <Clock size={16} className="mr-1" />
               14 min read
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
             The Future of Career Development: AI-Powered Job Matching
           </h1>
           
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl leading-relaxed mb-4">
+          <p className="text-xl text-gray-600 max-w-4xl leading-relaxed mb-4">
             Exploring how machine learning algorithms can revolutionize the way we match job seekers with their ideal career opportunities.
           </p>
 
@@ -46,7 +46,7 @@ export default function FutureOfCareerDevelopmentBlog() {
             {['AI', 'Career', 'Technology'].map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-sm rounded"
+                className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
               >
                 #{tag}
               </span>
@@ -63,8 +63,8 @@ export default function FutureOfCareerDevelopmentBlog() {
               className="rounded-full bg-gray-100"
             />
             <div className="ml-4">
-              <div className="text-sm text-gray-500 dark:text-gray-400">Written by</div>
-              <div className="font-medium text-gray-900 dark:text-white">Kudakwashe Taderera</div>
+              <div className="text-sm text-gray-500">Written by</div>
+              <div className="font-medium text-gray-900">Kudakwashe Taderera</div>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function FutureOfCareerDevelopmentBlog() {
       {/* Main Content */}
       <div className="container-custom py-12">
         <div className="max-w-3xl mx-auto">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none">
             {/* First Letter Styling */}
             <p className="first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1">
               The traditional approach to job searching and career development is undergoing a dramatic transformation, 
@@ -100,28 +100,25 @@ export default function FutureOfCareerDevelopmentBlog() {
 
             <figure className="my-6">
               <PlaceholderDiagram title="AI-Powered Job Matching Process" />
-              <figcaption className="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">
+              <figcaption className="text-center text-sm text-gray-500 mt-2">
                 Visual representation of how AI analyzes multiple factors to create optimal job matches
               </figcaption>
             </figure>
 
-            <div className="my-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div className="my-6 p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">The Impact of Poor Job Matching</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
-                  <h4 className="font-medium text-uiuc-orange">Cost to Companies</h4>
-                  <p className="text-3xl font-bold">$15K</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Per bad hire</p>
+                <div className="p-4 bg-white rounded-lg">
+                  <h4 className="text-2xl font-bold text-uiuc-orange">$15,000</h4>
+                  <p className="text-sm text-gray-600">Per bad hire</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
-                  <h4 className="font-medium text-uiuc-orange">Time Wasted</h4>
-                  <p className="text-3xl font-bold">3-6</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Months</p>
+                <div className="p-4 bg-white rounded-lg">
+                  <h4 className="text-2xl font-bold text-uiuc-orange">3-6</h4>
+                  <p className="text-sm text-gray-600">Months</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
-                  <h4 className="font-medium text-uiuc-orange">Productivity Loss</h4>
-                  <p className="text-3xl font-bold">34%</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Team impact</p>
+                <div className="p-4 bg-white rounded-lg">
+                  <h4 className="text-2xl font-bold text-uiuc-orange">30%</h4>
+                  <p className="text-sm text-gray-600">Team impact</p>
                 </div>
               </div>
             </div>
@@ -147,21 +144,21 @@ export default function FutureOfCareerDevelopmentBlog() {
               We employ various ML models to improve matching accuracy:
             </p>
             <div className="my-6 space-y-4">
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-lg font-semibold mb-4">Collaborative Filtering</h4>
                 <p>
                   Similar to how Netflix recommends movies, our system learns from successful placements to improve future matches.
                 </p>
               </div>
 
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-lg font-semibold mb-4">Deep Learning Networks</h4>
                 <p>
                   Neural networks analyze patterns in successful career transitions to predict potential career paths.
                 </p>
               </div>
 
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-lg font-semibold mb-4">Gradient Boosting</h4>
                 <p>
                   Ensemble learning techniques combine multiple factors to generate highly accurate match scores.
@@ -193,7 +190,7 @@ export default function FutureOfCareerDevelopmentBlog() {
               <li>Calculate career growth potential</li>
             </ul>
 
-            <div className="my-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div className="my-6 p-6 bg-gray-50 rounded-lg">
               <h4 className="text-lg font-semibold mb-4">Success Metrics</h4>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -232,15 +229,15 @@ export default function FutureOfCareerDevelopmentBlog() {
 
             <h2>Future Developments</h2>
             <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-xl font-semibold text-uiuc-orange mb-2">Real-time Skill Tracking</h4>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-600">
                   Continuous monitoring and updating of skills based on work performance and learning activities.
                 </p>
               </div>
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-xl font-semibold text-uiuc-orange mb-2">Predictive Analytics</h4>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-600">
                   Advanced forecasting of industry trends and skill demands to guide career decisions.
                 </p>
               </div>
@@ -253,7 +250,7 @@ export default function FutureOfCareerDevelopmentBlog() {
               talent and opportunity, leading to better outcomes for both individuals and organizations.
             </p>
             
-            <div className="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div className="mt-8 p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Learn More About AI in Career Development</h3>
               <p className="mb-4">Explore these resources:</p>
               <ul className="space-y-2">
@@ -277,7 +274,7 @@ export default function FutureOfCareerDevelopmentBlog() {
           </div>
 
           {/* Author and Share Section */}
-          <footer className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+          <footer className="mt-8 pt-6 border-t border-gray-200">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <Image
@@ -288,9 +285,9 @@ export default function FutureOfCareerDevelopmentBlog() {
                   className="rounded-full bg-gray-100"
                 />
                 <div>
-                  <div className="font-medium text-gray-900 dark:text-white">Kudakwashe Taderera</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Technopreneur | Full Stack Software Engineer | Data Scientist</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  <div className="font-medium text-gray-900">Kudakwashe Taderera</div>
+                  <div className="text-sm text-gray-500">Technopreneur | Full Stack Software Engineer | Data Scientist</div>
+                  <div className="text-sm text-gray-500 mt-1">
                     Building innovative solutions at the intersection of technology and business
                   </div>
                 </div>

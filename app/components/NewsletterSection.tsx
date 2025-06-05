@@ -44,7 +44,7 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section className="section-padding bg-uiuc-blue dark:bg-gray-900">
+    <section className="section-padding bg-uiuc-blue">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-uiuc-orange rounded-full mb-6">

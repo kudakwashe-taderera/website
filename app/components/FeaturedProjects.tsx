@@ -122,11 +122,11 @@ export default function FeaturedProjects() {
   }
 
   return (
-    <section className="section-padding bg-white dark:bg-gray-900">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Showcasing innovative solutions that demonstrate my expertise in building scalable, impactful software
             systems. Click on any project to explore detailed information.
           </p>
@@ -137,9 +137,9 @@ export default function FeaturedProjects() {
             <div
               key={index}
               onClick={() => handleProjectClick(project)}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700 cursor-pointer group"
+              className="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100 cursor-pointer group"
             >
-              <div className="relative h-48 bg-gray-50 dark:bg-gray-700 flex items-center justify-center group-hover:bg-gray-100 dark:group-hover:bg-gray-600 transition-colors duration-300">
+              <div className="relative h-48 bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                 {getCategoryIcon(project.category)}
                 <div className="absolute top-4 left-4">
                   <span className="px-3 py-1 bg-uiuc-orange text-white text-sm rounded-full">{project.category}</span>
@@ -152,22 +152,22 @@ export default function FeaturedProjects() {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-uiuc-orange transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-uiuc-orange transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.slice(0, 3).map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                      className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.tech.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
                       +{project.tech.length - 3} more
                     </span>
                   )}
@@ -189,7 +189,7 @@ export default function FeaturedProjects() {
                       e.stopPropagation()
                       window.open(project.githubUrl, "_blank")
                     }}
-                    className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex-1 justify-center"
+                    className="flex items-center space-x-2 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex-1 justify-center"
                   >
                     <Github size={16} />
                     <span>Code</span>

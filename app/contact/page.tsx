@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
-import { Mail, MapPin, Clock, Send, CheckCircle, Plus, Minus } from "lucide-react"
+import { Mail, MapPin, Clock, ChevronDown, MessageCircle, Send, CheckCircle, Plus, Minus } from "lucide-react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -23,26 +23,26 @@ function FAQAccordion({ faq, index }: { faq: FAQItem; index: number }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg">
+    <div className="w-full">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between text-left"
+        className="w-full flex items-start justify-between text-left"
       >
-        <h3 className="text-lg font-semibold text-gray-900">{faq.question}</h3>
-        <span className="flex-shrink-0 ml-4">
-          {isOpen ? (
-            <Minus className="w-5 h-5 text-uiuc-orange" />
-          ) : (
-            <Plus className="w-5 h-5 text-uiuc-orange" />
-          )}
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-uiuc-blue transition-colors pr-4">
+          {faq.question}
+        </h3>
+        <span className={`flex-shrink-0 ml-4 mt-1 transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+          <ChevronDown className="w-5 h-5 text-uiuc-orange" />
         </span>
       </button>
       <div
-        className={`mt-4 text-gray-600 transition-all duration-200 overflow-hidden ${
-          isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+        className={`overflow-hidden transition-all duration-300 ${
+          isOpen ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'
         }`}
       >
-        {faq.answer}
+        <div className="pb-2 text-gray-600 leading-relaxed">
+          {faq.answer}
+        </div>
       </div>
     </div>
   )
@@ -66,19 +66,16 @@ const formSchema = z.object({
 export default function ContactPage() {
   const searchParams = useSearchParams()
   const serviceType = searchParams?.get("type") || ""
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: serviceType ? `Inquiry about ${serviceType}` : "",
-    message: "",
-  })
-
   const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: formData,
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: serviceType ? `Inquiry about ${serviceType}` : "",
+      message: "",
+    },
   })
 
   useEffect(() => {
@@ -91,12 +88,9 @@ export default function ContactPage() {
         mobile: "Mobile Development",
         cloud: "Cloud Architecture",
       }
-      setFormData(prev => ({
-        ...prev,
-        subject: `Inquiry about ${serviceMap[serviceType] || serviceType}`,
-      }))
+      form.setValue('subject', `Inquiry about ${serviceMap[serviceType] || serviceType}`)
     }
-  }, [serviceType])
+  }, [serviceType, form])
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -256,7 +250,7 @@ export default function ContactPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
+      <section id="contact-form" className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -270,37 +264,39 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+            <div className="space-y-8">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8">Get in Touch</h2>
 
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#FF552E] rounded-lg flex items-center justify-center">
-                    <Mail className="text-white" size={24} />
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4 p-4 hover:bg-gray-50 rounded-xl transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 bg-uiuc-orange/10 rounded-xl flex items-center justify-center">
+                      <Mail className="text-uiuc-orange" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Email</h3>
+                      <p className="text-gray-600 mt-1">Use the contact form to reach me securely</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">Use the contact form to reach me securely</p>
-                  </div>
-                </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#13294B] rounded-lg flex items-center justify-center">
-                    <MapPin className="text-white" size={24} />
+                  <div className="flex items-start space-x-4 p-4 hover:bg-gray-50 rounded-xl transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 bg-uiuc-blue/10 rounded-xl flex items-center justify-center">
+                      <MapPin className="text-uiuc-blue" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Location</h3>
+                      <p className="text-gray-600 mt-1">Urbana-Champaign, Illinois, USA</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
-                    <p className="text-gray-600">Urbana-Champaign, Illinois, USA</p>
-                  </div>
-                </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#FF552E] rounded-lg flex items-center justify-center">
-                    <Clock className="text-white" size={24} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Response Time</h3>
-                    <p className="text-gray-600">Usually within 24 hours</p>
+                  <div className="flex items-start space-x-4 p-4 hover:bg-gray-50 rounded-xl transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 bg-uiuc-orange/10 rounded-xl flex items-center justify-center">
+                      <Clock className="text-uiuc-orange" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">Response Time</h3>
+                      <p className="text-gray-600 mt-1">Usually within 24 hours</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -333,67 +329,93 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Send a Message</h2>
+              <p className="text-gray-600 mb-8">Fill out the form and I'll get back to you as soon as possible.</p>
+              
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="Your email" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Full Name</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="John Doe" 
+                              {...field} 
+                              className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700"
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-500 text-sm" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-gray-700">Email</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="john@example.com" 
+                              type="email" 
+                              {...field} 
+                              className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700"
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-500 text-sm" />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
                   <FormField
                     control={form.control}
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Subject</FormLabel>
+                        <FormLabel className="text-gray-700">Subject</FormLabel>
                         <FormControl>
-                          <Input placeholder="Subject of your message" {...field} />
+                          <Input
+                            placeholder="How can I help you?"
+                            {...field}
+                            value={field.value || ''}
+                            className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700"
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-red-500 text-sm" />
                       </FormItem>
                     )}
                   />
+
                   <FormField
                     control={form.control}
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel className="text-gray-700">Message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Your message"
-                            className="min-h-[150px]"
+                            placeholder="Tell me about your project..."
+                            className="min-h-[150px] p-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700 resize-y"
                             {...field}
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-red-500 text-sm" />
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" className="w-full">
-                    Send Message
+
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-gradient-to-r from-uiuc-orange to-uiuc-orange/90 hover:from-uiuc-orange/90 hover:to-uiuc-orange/80 h-14 text-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 rounded-lg"
+                  >
+                    <Send className="mr-2 h-5 w-5" /> Send Message
                   </Button>
                 </form>
               </Form>
@@ -403,17 +425,50 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-gray-100 py-20">
         <div className="container-custom">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
+            <span className="inline-block bg-uiuc-orange/10 text-uiuc-orange text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+              Common Questions
+            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Detailed answers to common questions about working together</p>
+            <div className="w-20 h-1 bg-gradient-to-r from-uiuc-orange to-uiuc-blue mx-auto mb-6 rounded-full"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Find answers to common questions about my services, process, and more. Can't find what you're looking for? Feel free to reach out!
+            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             {faqs.map((faq, index) => (
-              <FAQAccordion key={index} faq={faq} index={index} />
+              <div 
+                key={index} 
+                className="group bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-uiuc-orange/30"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-uiuc-orange/10 to-uiuc-blue/10 flex items-center justify-center mt-1 group-hover:from-uiuc-orange/20 group-hover:to-uiuc-blue/20 transition-all duration-300">
+                    <span className="bg-gradient-to-r from-uiuc-orange to-uiuc-blue bg-clip-text text-transparent font-bold">Q{index + 1}</span>
+                  </div>
+                  <div className="flex-1">
+                    <FAQAccordion faq={faq} index={index} />
+                  </div>
+                </div>
+              </div>
             ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center space-x-3 bg-white px-6 py-3 rounded-full shadow-sm border border-gray-200 hover:shadow-md hover:border-uiuc-orange/50 transition-all duration-300">
+              <MessageCircle className="w-5 h-5 text-uiuc-orange flex-shrink-0" />
+              <p className="text-gray-700">
+                Still have questions?{" "}
+                <a 
+                  href="#contact-form" 
+                  className="text-uiuc-blue hover:underline font-medium hover:text-uiuc-orange transition-colors"
+                >
+                  Contact me directly
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </section>

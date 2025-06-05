@@ -3,7 +3,7 @@ import { Rocket, DollarSign, Handshake, ArrowRight } from "lucide-react"
 
 export default function SponsorshipCallout() {
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-800 dark:to-blue-800">
+    <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600">
       <div className="container-custom">
         <div className="text-center text-white">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-6">

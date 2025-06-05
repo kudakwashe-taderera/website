@@ -76,13 +76,13 @@ export default function TestimonialsPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Client <span className="gradient-text">Testimonials</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Hear from satisfied clients and collaborators who have experienced the quality and impact of my work
               firsthand.
             </p>
@@ -92,32 +92,32 @@ export default function TestimonialsPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-uiuc-orange mb-2">50+</div>
-              <div className="text-gray-600 dark:text-gray-400">Happy Clients</div>
+              <div className="text-gray-600">Happy Clients</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-uiuc-orange mb-2">4.9/5</div>
-              <div className="text-gray-600 dark:text-gray-400">Average Rating</div>
+              <div className="text-gray-600">Average Rating</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-uiuc-orange mb-2">100%</div>
-              <div className="text-gray-600 dark:text-gray-400">Project Success Rate</div>
+              <div className="text-gray-600">Project Success Rate</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-uiuc-orange mb-2">95%</div>
-              <div className="text-gray-600 dark:text-gray-400">Client Retention</div>
+              <div className="text-gray-600">Client Retention</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Grid */}
-      <section className="section-padding bg-white dark:bg-gray-900">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-100 dark:border-gray-700 card-hover relative"
+                className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 card-hover relative"
               >
                 <Quote className="absolute top-6 right-6 text-uiuc-orange opacity-20" size={32} />
 
@@ -129,7 +129,7 @@ export default function TestimonialsPage() {
                 </div>
 
                 {/* Testimonial Text */}
-                <blockquote className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                <blockquote className="text-gray-700 mb-6 leading-relaxed">
                   "{testimonial.text}"
                 </blockquote>
 
@@ -149,8 +149,8 @@ export default function TestimonialsPage() {
                       className="w-12 h-12 rounded-full object-cover"
                     />
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</div>
-                      <div className="text-gray-600 dark:text-gray-400 text-sm">{testimonial.role}</div>
+                      <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                      <div className="text-gray-600 text-sm">{testimonial.role}</div>
                       <div className="text-uiuc-orange text-sm font-medium">{testimonial.company}</div>
                     </div>
                   </div>

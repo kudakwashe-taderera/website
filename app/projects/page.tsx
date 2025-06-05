@@ -813,13 +813,13 @@ export default function ProjectsPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               My <span className="gradient-text">Projects</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               A comprehensive portfolio of innovative projects spanning education technology, real estate solutions,
               AI/ML applications, and data engineering platforms. Click on any project to explore detailed information.
             </p>
@@ -835,7 +835,7 @@ export default function ProjectsPage() {
                 placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-uiuc-orange focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-uiuc-orange focus:border-transparent bg-white text-gray-900"
               />
             </div>
 
@@ -848,7 +848,7 @@ export default function ProjectsPage() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category
                       ? "bg-uiuc-orange text-white"
-                      : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
+                      : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
                   }`}
                 >
                   {category}
@@ -859,7 +859,7 @@ export default function ProjectsPage() {
 
           {/* Results Count */}
           <div className="text-center mb-8">
-            <p className="text-gray-600 dark:text-gray-400">
+            <p className="text-gray-600">
               Showing {filteredProjects.length} of {projects.length} projects
             </p>
           </div>
@@ -867,16 +867,16 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="section-padding bg-white dark:bg-gray-900">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
                 onClick={() => handleProjectClick(project)}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700 cursor-pointer group"
+                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 cursor-pointer group"
               >
-                <div className="relative bg-gray-50 dark:bg-gray-700 h-48 flex items-center justify-center group-hover:bg-gray-100 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                <div className="relative bg-gray-50 h-48 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                   {getCategoryIcon(project.category)}
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-uiuc-orange text-white text-sm rounded-full">{project.category}</span>
@@ -894,22 +894,22 @@ export default function ProjectsPage() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-uiuc-orange transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-uiuc-orange transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">{project.description}</p>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.slice(0, 3).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded"
+                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.tech.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
+                      <span className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
                         +{project.tech.length - 3} more
                       </span>
                     )}
@@ -931,7 +931,7 @@ export default function ProjectsPage() {
                         e.stopPropagation()
                         window.open(project.githubUrl, "_blank")
                       }}
-                      className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex-1 justify-center"
+                      className="flex items-center space-x-2 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex-1 justify-center"
                     >
                       <Github size={16} />
                       <span>Code</span>
@@ -944,7 +944,7 @@ export default function ProjectsPage() {
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-500 dark:text-gray-400 text-lg">
+              <p className="text-gray-500 text-lg">
                 No projects found matching your criteria. Try adjusting your search or filter.
               </p>
             </div>

@@ -25,7 +25,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-uiuc-blue dark:bg-gray-900 text-white">
+    <footer className="bg-uiuc-blue text-white">
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}

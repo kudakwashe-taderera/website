@@ -6,10 +6,10 @@ interface PlaceholderDiagramProps {
 
 export default function PlaceholderDiagram({ title }: PlaceholderDiagramProps) {
   return (
-    <div className="w-full h-64 bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col items-center justify-center p-4">
+    <div className="w-full h-64 bg-gray-100 rounded-lg flex flex-col items-center justify-center p-4">
       {/* Placeholder SVG */}
       <svg
-        className="w-16 h-16 text-gray-400 dark:text-gray-600 mb-4"
+        className="w-16 h-16 text-gray-400 mb-4"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -30,12 +30,12 @@ export default function PlaceholderDiagram({ title }: PlaceholderDiagramProps) {
       </svg>
       
       {/* Title */}
-      <p className="text-gray-600 dark:text-gray-400 text-center font-medium">
+      <p className="text-gray-600 text-center font-medium">
         {title}
       </p>
       
       {/* Placeholder text */}
-      <p className="text-gray-500 dark:text-gray-500 text-sm text-center mt-2">
+      <p className="text-gray-500 text-sm text-center mt-2">
         Diagram coming soon
       </p>
     </div>

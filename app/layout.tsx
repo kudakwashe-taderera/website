@@ -4,7 +4,6 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Navigation from "./components/Navigation"
 import Footer from "./components/Footer"
-import { ThemeProvider } from "./components/ThemeProvider"
 import FloatingActionButton from "./components/FloatingActionButton"
 import { Toaster } from "./components/ui/toaster"
 import { BackToTop } from "@/components/BackToTop"
@@ -79,17 +78,15 @@ export default function RootLayout({
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body className={`${inter.className} transition-colors duration-300`}>
-        <ThemeProvider>
-          <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
-            <Navigation />
-            <main className="min-h-screen">{children}</main>
-            <Footer />
-            <FloatingActionButton />
-            <BackToTop />
-            <Toaster />
-          </div>
-        </ThemeProvider>
+      <body className={inter.className}>
+        <div className="bg-white text-gray-900 min-h-screen">
+          <Navigation />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <FloatingActionButton />
+          <BackToTop />
+          <Toaster />
+        </div>
       </body>
     </html>
   )

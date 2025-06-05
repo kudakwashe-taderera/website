@@ -3,7 +3,7 @@ import { Briefcase, Clock, MapPin, ArrowRight, CheckCircle } from "lucide-react"
 
 export default function CareerCallout() {
   return (
-    <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 dark:from-green-800 dark:to-teal-800">
+    <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-white">
@@ -55,37 +55,37 @@ export default function CareerCallout() {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-2xl">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Quick Stats</h3>
+          <div className="bg-white rounded-xl p-8 shadow-2xl">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Stats</h3>
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                   <Clock className="text-green-600" size={24} />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">5+ Years</div>
-                  <div className="text-gray-600 dark:text-gray-400">Professional Experience</div>
+                  <div className="font-semibold text-gray-900">5+ Years</div>
+                  <div className="text-gray-600">Professional Experience</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                   <Briefcase className="text-blue-600" size={24} />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">20+ Projects</div>
-                  <div className="text-gray-600 dark:text-gray-400">Successfully Delivered</div>
+                  <div className="font-semibold text-gray-900">20+ Projects</div>
+                  <div className="text-gray-600">Successfully Delivered</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                   <MapPin className="text-purple-600" size={24} />
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900 dark:text-white">Remote Ready</div>
-                  <div className="text-gray-600 dark:text-gray-400">Based in Urbana-Champaign, IL</div>
+                  <div className="font-semibold text-gray-900">Remote Ready</div>
+                  <div className="text-gray-600">Based in Urbana-Champaign, IL</div>
                 </div>
               </div>
             </div>

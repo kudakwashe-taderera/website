@@ -97,13 +97,13 @@ export default function BlogPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="section-padding bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               My <span className="gradient-text">Blog</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Insights on technology, entrepreneurship, career development, and the journey of building impactful
               software solutions.
             </p>
@@ -114,7 +114,7 @@ export default function BlogPage() {
             {categories.map((category) => (
               <button
                 key={category}
-                className="px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-uiuc-orange hover:text-white hover:border-uiuc-orange transition-all duration-300"
+                className="px-4 py-2 rounded-full border border-gray-300 text-gray-700 hover:bg-uiuc-orange hover:text-white hover:border-uiuc-orange transition-all duration-300"
               >
                 {category}
               </button>
@@ -124,17 +124,17 @@ export default function BlogPage() {
       </section>
 
       {/* Featured Posts */}
-      <section className="section-padding bg-white dark:bg-gray-900">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Featured Articles</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Featured Articles</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {featuredPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover"
+                className="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
               >
-                <div className="relative h-48 bg-gray-50 dark:bg-gray-700 flex items-center justify-center group-hover:bg-gray-100 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                <div className="relative h-48 bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                   {getCategoryIcon(post.category)}
                 </div>
                 <div className="p-6">
@@ -142,24 +142,24 @@ export default function BlogPage() {
                     <span className="px-3 py-1 bg-uiuc-orange bg-opacity-10 text-uiuc-orange rounded-full text-sm font-medium">
                       {post.category}
                     </span>
-                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                    <div className="flex items-center text-gray-500 text-sm">
                       <Calendar size={16} className="mr-1" />
                       {new Date(post.date).toLocaleDateString()}
                     </div>
-                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                    <div className="flex items-center text-gray-500 text-sm">
                       <Clock size={16} className="mr-1" />
                       {post.readTime}
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{post.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">{post.excerpt}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
+                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded"
+                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
                       >
                         #{tag}
                       </span>
@@ -179,15 +179,15 @@ export default function BlogPage() {
           </div>
 
           {/* Recent Posts */}
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Recent Articles</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Recent Articles</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recentPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden card-hover group"
+                className="bg-white rounded-xl shadow-lg overflow-hidden card-hover group"
               >
-                <div className="relative h-40 bg-gray-50 dark:bg-gray-700 flex items-center justify-center group-hover:bg-gray-100 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                <div className="relative h-40 bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                   {getCategoryIcon(post.category)}
                 </div>
                 <div className="p-6">
@@ -195,17 +195,17 @@ export default function BlogPage() {
                     <span className="px-3 py-1 bg-uiuc-orange bg-opacity-10 text-uiuc-orange rounded-full text-sm font-medium">
                       {post.category}
                     </span>
-                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                    <div className="flex items-center text-gray-500 text-sm">
                       <Clock size={14} className="mr-1" />
                       {post.readTime}
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{post.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{post.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
 
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                    <div className="flex items-center text-gray-500 text-sm">
                       <Calendar size={14} className="mr-1" />
                       {new Date(post.date).toLocaleDateString()}
                     </div>
@@ -224,11 +224,11 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-800">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Stay Updated with My Latest Posts</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated with My Latest Posts</h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Subscribe to get notified when I publish new articles about technology, entrepreneurship, and career
               development.
             </p>

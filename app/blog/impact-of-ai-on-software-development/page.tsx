@@ -10,11 +10,11 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
   return (
     <article className="pt-16 blog-content">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="bg-gradient-to-br from-gray-50 to-white">
         <div className="container-custom py-8">
           <Link 
             href="/blog"
-            className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-uiuc-orange dark:hover:text-uiuc-orange mb-6"
+            className="inline-flex items-center text-gray-600 hover:text-uiuc-orange mb-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
@@ -24,21 +24,21 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
             <span className="px-3 py-1 bg-uiuc-orange bg-opacity-10 text-uiuc-orange rounded-full text-sm font-medium">
               AI/ML
             </span>
-            <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+            <div className="flex items-center text-gray-500 text-sm">
               <Calendar size={16} className="mr-1" />
               January 25, 2024
             </div>
-            <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+            <div className="flex items-center text-gray-500 text-sm">
               <Clock size={16} className="mr-1" />
               16 min read
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
             The Impact of AI on Software Development
           </h1>
           
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl leading-relaxed mb-4">
+          <p className="text-xl text-gray-600 max-w-4xl leading-relaxed mb-4">
             How artificial intelligence is transforming the way we write, test, and maintain code.
           </p>
 
@@ -46,7 +46,7 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
             {['AI', 'Programming', 'Future'].map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-sm rounded"
+                className="px-2 py-1 bg-gray-100 text-gray-600 text-sm rounded"
               >
                 #{tag}
               </span>
@@ -63,8 +63,8 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
               className="rounded-full bg-gray-100"
             />
             <div className="ml-4">
-              <div className="text-sm text-gray-500 dark:text-gray-400">Written by</div>
-              <div className="font-medium text-gray-900 dark:text-white">Kudakwashe Taderera</div>
+              <div className="text-sm text-gray-500">Written by</div>
+              <div className="font-medium text-gray-900">Kudakwashe Taderera</div>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
       {/* Main Content */}
       <div className="container-custom py-12">
         <div className="max-w-3xl mx-auto">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
+          <div className="prose prose-lg max-w-none">
             {/* First Letter Styling */}
             <p className="first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1">
               Artificial Intelligence is revolutionizing every aspect of software development, from code generation to testing and deployment. As we stand at the cusp of this transformation, it's crucial to understand how AI is reshaping our industry and what it means for developers.
@@ -97,26 +97,26 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
 
             <figure className="my-6">
               <PlaceholderDiagram title="AI-Powered Development Workflow" />
-              <figcaption className="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">
+              <figcaption className="text-center text-sm text-gray-500 mt-2">
                 Modern development workflow enhanced by AI tools
               </figcaption>
             </figure>
 
             <h2>Key Areas of Impact</h2>
-            <div className="my-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div className="my-6 p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">AI-Powered Development Tools</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
+                <div className="p-4 bg-white rounded-lg">
                   <h4 className="font-medium text-uiuc-orange">Code Generation</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">40% productivity boost</p>
+                  <p className="text-sm text-gray-600">40% productivity boost</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
+                <div className="p-4 bg-white rounded-lg">
                   <h4 className="font-medium text-uiuc-orange">Bug Detection</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">60% faster debugging</p>
+                  <p className="text-sm text-gray-600">60% faster debugging</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-gray-700 rounded-lg">
+                <div className="p-4 bg-white rounded-lg">
                   <h4 className="font-medium text-uiuc-orange">Code Review</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">30% better quality</p>
+                  <p className="text-sm text-gray-600">30% better quality</p>
                 </div>
               </div>
             </div>
@@ -142,7 +142,7 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
 
             <h2>Challenges and Considerations</h2>
             <div className="my-6 space-y-4">
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-lg font-semibold mb-4">Key Challenges</h4>
                 <ul>
                   <li>Ensuring code quality and reliability</li>
@@ -166,15 +166,15 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
 
             <h2>Future Outlook</h2>
             <div className="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-xl font-semibold text-uiuc-orange mb-2">Short Term</h4>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-600">
                   Enhanced code generation and automated testing capabilities
                 </p>
               </div>
-              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="p-6 bg-gray-50 rounded-lg">
                 <h4 className="text-xl font-semibold text-uiuc-orange mb-2">Long Term</h4>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-600">
                   Full-scale AI pair programming and autonomous development
                 </p>
               </div>
@@ -185,7 +185,7 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
               AI is not just changing how we write code—it's transforming the entire software development lifecycle. Embracing these tools while maintaining human oversight and creativity will be key to success in the future of software development.
             </p>
             
-            <div className="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div className="mt-8 p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Related Articles</h3>
               <ul className="space-y-2">
                 <li>
@@ -208,7 +208,7 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
           </div>
 
           {/* Author and Share Section */}
-          <footer className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+          <footer className="mt-8 pt-6 border-t border-gray-200">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <Image
@@ -219,9 +219,9 @@ export default function AIImpactOnSoftwareDevelopmentBlog() {
                   className="rounded-full bg-gray-100"
                 />
                 <div>
-                  <div className="font-medium text-gray-900 dark:text-white">Kudakwashe Taderera</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">Technopreneur | Full Stack Software Engineer | Data Scientist</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                  <div className="font-medium text-gray-900">Kudakwashe Taderera</div>
+                  <div className="text-sm text-gray-500">Technopreneur | Full Stack Software Engineer | Data Scientist</div>
+                  <div className="text-sm text-gray-500 mt-1">
                     Building innovative solutions at the intersection of technology and business
                   </div>
                 </div>

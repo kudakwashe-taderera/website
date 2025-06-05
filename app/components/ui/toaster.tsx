@@ -31,11 +31,11 @@ export function Toaster() {
   const getBackgroundColor = (type: Toast["type"]) => {
     switch (type) {
       case "success":
-        return "bg-green-50 dark:bg-green-900 border-green-200 dark:border-green-700"
+        return "bg-green-50 border-green-200"
       case "error":
-        return "bg-red-50 dark:bg-red-900 border-red-200 dark:border-red-700"
+        return "bg-red-50 border-red-200"
       case "info":
-        return "bg-blue-50 dark:bg-blue-900 border-blue-200 dark:border-blue-700"
+        return "bg-blue-50 border-blue-200"
     }
   }
 
@@ -51,15 +51,15 @@ export function Toaster() {
           <div className="flex items-start">
             <div className="flex-shrink-0">{getIcon(toast.type)}</div>
             <div className="ml-3 w-0 flex-1">
-              <p className="text-sm font-medium text-gray-900 dark:text-white">{toast.title}</p>
+              <p className="text-sm font-medium text-gray-900">{toast.title}</p>
               {toast.description && (
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{toast.description}</p>
+                <p className="mt-1 text-sm text-gray-500">{toast.description}</p>
               )}
             </div>
             <div className="ml-4 flex-shrink-0 flex">
               <button
                 onClick={() => removeToast(toast.id)}
-                className="inline-flex text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
+                className="inline-flex text-gray-400 hover:text-gray-500"
               >
                 <X size={16} />
               </button>

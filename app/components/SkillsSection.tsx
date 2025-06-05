@@ -82,11 +82,11 @@ export default function SkillsSection() {
   ]
 
   return (
-    <section className="section-padding bg-gray-50 dark:bg-gray-800">
+    <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Technical Expertise</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Expertise</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A comprehensive skill set spanning the entire technology stack, from user interfaces to data infrastructure
           </p>
         </div>
@@ -104,7 +104,7 @@ export default function SkillsSection() {
                     className={`w-full text-left p-3 md:p-4 rounded-lg transition-all duration-300 ${
                       activeCategory === index
                         ? "bg-[#FF552E] text-white shadow-lg"
-                        : "bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        : "bg-white text-gray-700 hover:bg-gray-100"
                     }`}
                   >
                     <div className="flex items-center space-x-3">
@@ -119,14 +119,14 @@ export default function SkillsSection() {
 
           {/* Skills Display */}
           <div className="lg:col-span-2">
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-6 md:p-8 shadow-lg">
+            <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
               <div className="mb-6">
                 <div className="flex items-center space-x-3 mb-4">
                   {(() => {
                     const Icon = skillCategories[activeCategory].icon
                     return <Icon size={28} className="text-[#FF552E] md:w-8 md:h-8" />
                   })()}
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900">
                     {skillCategories[activeCategory].title}
                   </h3>
                 </div>
@@ -136,12 +136,12 @@ export default function SkillsSection() {
                 {skillCategories[activeCategory].skills.map((skill, index) => (
                   <div key={index} className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                      <span className="font-medium text-gray-700 text-sm md:text-base">
                         {skill.name}
                       </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
+                      <span className="text-sm text-gray-500">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
                         className="bg-gradient-to-r from-[#13294B] to-[#FF552E] h-2 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
