@@ -49,7 +49,7 @@ export default function HeroSection() {
 
               <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
                 I build scalable and impactful software systems that empower education, career growth, and the real estate
-                industry. Specializing in end-to-end development with a focus on data engineering and innovation.
+                industry. I also specialize in end-to-end development with a focus on data engineering and innovation.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
