@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://kudakwashetaderera.me/og-image.jpg",
+        url: "https://kudakwashetaderera.me/og-image.png", 
         width: 1200,
         height: 630,
-        alt: "Kudakwashe Taderera - Portfolio Preview",
+        alt: "Kudakwashe Taderera - Personal Branding Image",
       },
     ],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Kudakwashe Taderera | Technopreneur & Software Engineer",
     description:
       "Building scalable systems across education, careers, and real estate.",
-    images: ["https://kudakwashetaderera.me/og-image.jpg"],
+    images: ["https://kudakwashetaderera.me/og-image.png"], 
   },
   robots: {
     index: true,
@@ -48,6 +48,7 @@ export const metadata: Metadata = {
   },
   generator: "v0.dev",
 }
+
 
 
 const jsonLd = {
