@@ -9,13 +9,8 @@ export function BackToTop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShow(true)
-      } else {
-        setShow(false)
-      }
+      setShow(window.scrollY > 400)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -30,11 +25,11 @@ export function BackToTop() {
     <Button
       variant="outline"
       size="icon"
-      className="fixed bottom-8 right-8 z-50 rounded-full bg-background/80 backdrop-blur-sm hover:bg-accent"
+      className="fixed bottom-6 right-20 z-50 rounded-full bg-background/80 backdrop-blur-sm hover:bg-accent shadow-lg transition-all duration-300 transform hover:scale-105"
       onClick={scrollToTop}
       aria-label="Back to top"
     >
       <ArrowUp className="h-4 w-4" />
     </Button>
   )
-} 
+}
