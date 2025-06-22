@@ -2,14 +2,15 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { MessageCircle, X, Mail, Briefcase, FileText, Heart, Phone } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
+import { X, Mail, Briefcase, FileText, Heart } from "lucide-react"
 
 export default function FloatingActionButton() {
   const [isOpen, setIsOpen] = useState(false)
 
   const actions = [
     { 
-      icon: Phone, 
+      icon: FaWhatsapp, 
       label: "WhatsApp", 
       href: `https://wa.me/14479025849?text=${encodeURIComponent("Hi Kudakwashe, is this the right time to chat?")}`, 
       color: "bg-green-500 hover:bg-green-600",
@@ -69,13 +70,13 @@ export default function FloatingActionButton() {
         </div>
       )}
 
-      {/* Main FAB */}
+      {/* WhatsApp FAB */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-uiuc-orange hover:bg-opacity-90 text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
+        className="w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
         aria-label="Quick actions"
       >
-        {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
+        {isOpen ? <X size={24} /> : <FaWhatsapp size={24} />}
       </button>
     </div>
   )
