@@ -122,20 +122,27 @@ export default function ContactPage() {
 
   const faqs: FAQItem[] = [
     {
-      question: "What services does NeXTStep offer?",
+      question: "What services does CodeXa offer?",
       answer: (
         <div className="space-y-2">
-          <p>NeXTStep is a comprehensive technology solutions provider offering:</p>
+          <p>CodeXa is a software development and data science company offering:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Full-stack web and mobile application development</li>
             <li>Data engineering and analytics platforms</li>
             <li>AI/ML integration and implementation</li>
-            <li>Career development and educational technology solutions</li>
-            <li>Real estate technology innovations</li>
+            <li>Business process automation</li>
             <li>Technical consultation and system architecture</li>
           </ul>
         </div>
       ),
+    },
+    {
+      question: "Who leads CodeXa?",
+      answer: "CodeXa is founded and led by Kudakwashe Taderera, an expert in full-stack development and data science with 8+ years of experience.",
+    },
+    {
+      question: "How long has CodeXa been in business?",
+      answer: "CodeXa was established in 2016 and has been delivering high-quality software and data solutions to clients worldwide ever since.",
     },
     {
       question: "What technologies and frameworks do you specialize in?",
@@ -173,10 +180,10 @@ export default function ContactPage() {
       ),
     },
     {
-      question: "What makes NeXTStep different from other technology companies?",
+      question: "What makes CodeXa different from other technology companies?",
       answer: (
         <div className="space-y-2">
-          <p>NeXTStep stands out through our:</p>
+          <p>CodeXa stands out through our:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Focus on educational technology and career development solutions</li>
             <li>Integration of cutting-edge AI/ML technologies in practical applications</li>
@@ -254,11 +261,10 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Let's <span className="gradient-text">Connect</span>
+              Contact <span className="gradient-text">CodeXa</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to discuss your next project? I'd love to hear about your ideas and explore how we can work together
-              to bring them to life.
+              Ready to elevate your business with high-quality software or data solutions? As the sole founder and expert at CodeXa, I am ready to help you achieve your goals. Book a consultation or request a quote today.
             </p>
           </div>
 
