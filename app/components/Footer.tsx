@@ -117,7 +117,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-300 text-center md:text-left">
-              © {currentYear} Kudakwashe Taderera. All rights reserved. NeXTStep Founder.
+              © {currentYear} Kudakwashe Taderera. All rights reserved. <span className="font-semibold">Founder of CodeXa</span>.
             </p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-300 hover:text-uiuc-orange transition-colors">
