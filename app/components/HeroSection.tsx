@@ -1,92 +1,14 @@
 import { ArrowRight, Calendar, Mail, Code, Database, Cpu, Layers } from "lucide-react"
 import { motion } from "framer-motion"
-
-const codeSnippets = [
-  // TypeScript Example (left)
-  [
-    "// CodeXa TypeScript Example",
-    "interface Engineer {",
-    "  name: string;",
-    "  company: string;",
-    "  skills: string[];",
-    "  yearsOfExperience: number;",
-    "  projects: string[];",
-    "  available: boolean;",
-    "}",
-    "",
-    "const kudakwashe: Engineer = {",
-    "  name: 'Kudakwashe Taderera',",
-    "  company: 'CodeXa',",
-    "  skills: ['React', 'Node.js', 'TypeScript', 'AWS', 'Python', 'Django', 'PostgreSQL', 'Docker'],",
-    "  yearsOfExperience: 8,",
-    "  projects: [",
-    "    'NeXTStep Platform',",
-    "    'Shomang Zenda Projects',",
-    "    'Party Fantasy Website',",
-    "    'SkillMatch AI',",
-    "    'Kart Marketplace'",
-    "  ],",
-    "  available: true",
-    "};",
-    "",
-    "function buildSolution(reqs: string[]): string {",
-    "  return `Solution for ${reqs.join(', ')}`;",
-    "}",
-    "",
-    "// Contact: hello@codexa.com"
-  ],
-  // Python Example (right)
-  [
-    "# CodeXa Python Example",
-    "class Engineer:",
-    "    def __init__(self, name, company, skills, years, projects, available):",
-    "        self.name = name",
-    "        self.company = company",
-    "        self.skills = skills",
-    "        self.years = years",
-    "        self.projects = projects",
-    "        self.available = available",
-    "",
-    "kudakwashe = Engineer(",
-    "    'Kudakwashe Taderera',",
-    "    'CodeXa',",
-    "    ['Django', 'Pandas', 'AWS', 'React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Docker'],",
-    "    8,",
-    "    ['NeXTStep Platform', 'Shomang Zenda Projects', 'Party Fantasy Website', 'SkillMatch AI', 'Kart Marketplace'],",
-    "    True",
-    ")",
-    "",
-    "def build_solution(reqs):",
-    "    return f'Solution for {', '.join(reqs)}'",
-    "",
-    "# Contact: hello@codexa.com"
-  ]
-];
-
-const CodeGridBackground = () => (
-  <div className="absolute inset-0 w-full h-full overflow-hidden z-0 opacity-30 pointer-events-none flex">
-    <div className="flex-1 flex flex-col justify-between h-full">
-      <div className="font-mono text-xs text-gray-600 space-y-1 select-none pl-8 pt-8 max-w-xs w-full">
-        {codeSnippets[0].map((line, j) => (
-          <div key={j} className="whitespace-pre">{line || <>&nbsp;</>}</div>
-        ))}
-      </div>
-    </div>
-    <div className="flex-1 flex flex-col justify-between h-full items-end">
-      <div className="font-mono text-xs text-gray-600 space-y-1 select-none pr-8 pt-8 max-w-xs w-full text-right">
-        {codeSnippets[1].map((line, j) => (
-          <div key={j} className="whitespace-pre">{line || <>&nbsp;</>}</div>
-        ))}
-      </div>
-    </div>
-  </div>
-);
+import ParticlesBackground from "./ParticlesBackground"
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white">
-      {/* Subtle Code Grid Background */}
-      <CodeGridBackground />
+      {/* Subtle Particles Background */}
+      <div className="absolute inset-0 w-full h-full z-0 opacity-15 pointer-events-none">
+        <ParticlesBackground />
+      </div>
 
       {/* Content */}
       <div className="container mx-auto px-6 py-24 relative z-10">

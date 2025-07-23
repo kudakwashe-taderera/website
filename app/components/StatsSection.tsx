@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Code, Users, Award, Zap } from "lucide-react"
+import { Code, Users, Award, Zap, MapPin } from "lucide-react"
 
 export default function StatsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -25,31 +25,38 @@ export default function StatsSection() {
   const stats = [
     {
       icon: Code,
-      value: 20,
+      value: 30,
       suffix: "+",
       label: "Projects Delivered",
-      description: "Full-stack applications across education, career, and real estate",
+      description: "Full-stack, AI, and data platforms for business and education",
     },
     {
       icon: Users,
-      value: 1000,
+      value: 5000,
       suffix: "+",
       label: "Users Impacted",
-      description: "Students and professionals empowered through my platforms",
+      description: "Professionals, students, and organizations empowered by my solutions",
     },
     {
       icon: Award,
-      value: 15,
+      value: 20,
       suffix: "+",
       label: "Technologies Mastered",
-      description: "From frontend frameworks to cloud infrastructure",
+      description: "Modern stacks: React, Node, Python, AWS, ML, and more",
     },
     {
       icon: Zap,
-      value: 99,
+      value: 98,
       suffix: "%",
       label: "Client Satisfaction",
-      description: "Delivering solutions that exceed expectations",
+      description: "Consistently delivering results and long-term value",
+    },
+    {
+      icon: MapPin,
+      value: 5,
+      suffix: "",
+      label: "Countries Served",
+      description: "USA, Australia, South Africa, Zimbabwe, Namibia",
     },
   ]
 
@@ -63,7 +70,7 @@ export default function StatsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (

@@ -10,17 +10,17 @@ import { Toaster } from "./components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Kudakwashe Taderera | Technopreneur & Full Stack Software Engineer",
+  title: "Kudakwashe Taderera | Software Developer, Data Scientist, Website Developer | CodeXa",
   description:
-    "Passionate technopreneur and full stack software engineer specializing in scalable systems for education, career growth, and real estate. Open to sponsorships and new opportunities.",
+    "Leading software developer, data scientist, and founder of CodeXa. Custom web, data, and AI solutions for businesses in USA, Australia, South Africa, Zimbabwe. Book a consultation today!",
   keywords:
-    "technopreneur, full stack developer, software engineer, React, Django, AWS, data engineer, Zimbabwe, sponsorship, UIUC, Kudakwashe Taderera",
+    "software developer, data scientist, website developer, software companies, CodeXa, Kudakwashe Taderera, full stack, AI, machine learning, web development, USA, Australia, South Africa, Zimbabwe, custom software, cloud, SaaS, digital solutions, consulting, engineering",
   authors: [{ name: "Kudakwashe Taderera" }],
   metadataBase: new URL("https://kudakwashetaderera.me"),
   openGraph: {
-    title: "Kudakwashe Taderera | Technopreneur & Software Engineer",
+    title: "Kudakwashe Taderera | Software Developer, Data Scientist, Website Developer | CodeXa",
     description:
-      "Building scalable and impactful systems across education, careers, and real estate. Connect for collaborations and sponsorships.",
+      "Custom software, data, and AI solutions for businesses in USA, Australia, South Africa, Zimbabwe. Work with Kudakwashe Taderera and CodeXa for world-class digital innovation.",
     url: "https://kudakwashetaderera.me",
     siteName: "Kudakwashe Taderera",
     type: "website",
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
         url: "https://kudakwashetaderera.me/og-image.png", 
         width: 1200,
         height: 630,
-        alt: "Kudakwashe Taderera - Personal Branding Image",
+        alt: "Kudakwashe Taderera - Software Developer & Data Scientist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@kudakwashe_t",
-    title: "Kudakwashe Taderera | Technopreneur & Software Engineer",
+    title: "Kudakwashe Taderera | Software Developer, Data Scientist, Website Developer | CodeXa",
     description:
-      "Building scalable systems across education, careers, and real estate.",
+      "Custom software, data, and AI solutions for businesses in USA, Australia, South Africa, Zimbabwe. Work with Kudakwashe Taderera and CodeXa for world-class digital innovation.",
     images: ["https://kudakwashetaderera.me/og-image.png"], 
   },
   robots: {
@@ -48,29 +48,28 @@ export const metadata: Metadata = {
   generator: "v0.dev",
 }
 
-
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Kudakwashe Taderera",
-  jobTitle: "Technopreneur & Full Stack Software Engineer",
-  description: "Passionate about building scalable systems for education, career growth, and real estate",
-  url: "https://kudakwashe-taderera.vercel.app",
-  sameAs: [
+  "name": "Kudakwashe Taderera",
+  "jobTitle": "Software Developer, Data Scientist, Website Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "CodeXa",
+    "url": "https://kudakwashetaderera.me"
+  },
+  "url": "https://kudakwashetaderera.me",
+  "sameAs": [
     "https://linkedin.com/in/kudakwashe-taderera",
-    "https://github.com/kudakwashe-taderera",
-    "https://twitter.com/kudakwashe_t",
+    "https://github.com/kudakwashe-taderera"
   ],
-  knowsAbout: [
-    "Full Stack Development",
-    "Data Engineering",
-    "Machine Learning",
-    "React",
-    "Django",
-    "AWS",
-    "PostgreSQL",
-  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": ["USA", "Australia", "South Africa", "Zimbabwe"]
+  },
+  "description": "Leading software developer, data scientist, and founder of CodeXa. Custom web, data, and AI solutions for businesses in USA, Australia, South Africa, Zimbabwe.",
+  "alumniOf": "University of Illinois Urbana-Champaign",
+  "email": "info@kudakwashetaderera.me"
 }
 
 export default function RootLayout({

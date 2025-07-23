@@ -13,7 +13,7 @@ export default function TestimonialsSection() {
       company: "Econet Wireless Zimbabwe",
       image: "/images/avatar.svg",
       rating: 5,
-      text: "Kudakwashe delivered an exceptional mobile banking platform that has transformed how we serve our rural communities. His technical expertise in full-stack development and understanding of the African market made him an invaluable partner.",
+      text: "Kudakwashe delivered an exceptional mobile banking platform that has transformed how we serve our rural communities. His technical expertise in full-stack development and understanding of the African market made him an invaluable partner. The platform's success has significantly increased financial inclusion in Zimbabwe.",
     },
     {
       name: "Thabo Nkosi",
@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
       company: "Standard Bank South Africa",
       image: "/images/avatar.svg",
       rating: 5,
-      text: "Working with Kudakwashe on our risk management system was a game-changer. His data engineering expertise and attention to security compliance helped us build a robust platform that serves millions of customers across Southern Africa.",
+      text: "Working with Kudakwashe on our risk management system was a game-changer. His data engineering expertise and attention to security compliance helped us build a robust platform that serves millions of customers across Southern Africa. The system's analytics capabilities have revolutionized our risk assessment process.",
     },
     {
       name: "Rumbidzai Dziva",
@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
       company: "EduTech Zimbabwe",
       image: "/images/avatar.svg",
       rating: 5,
-      text: "Kudakwashe's innovative approach to educational technology is remarkable. He built us a comprehensive learning management system that has helped thousands of students access quality education, even in remote areas.",
+      text: "Kudakwashe's innovative approach to educational technology is remarkable. He built us a comprehensive learning management system that has helped thousands of students access quality education, even in remote areas. The offline capabilities and mobile-first design have been crucial for our success in Zimbabwe.",
     },
     {
       name: "Mandla Thabethe",
@@ -37,7 +37,7 @@ export default function TestimonialsSection() {
       company: "Shoprite Holdings SA",
       image: "/images/avatar.svg",
       rating: 5,
-      text: "The e-commerce platform Kudakwashe developed for our African market has significantly improved our digital presence. His understanding of local consumer behavior and technical excellence delivered exactly what we needed.",
+      text: "The e-commerce platform Kudakwashe developed for our African market has significantly improved our digital presence. His understanding of local consumer behavior and technical excellence delivered exactly what we needed. The platform's performance during high-traffic periods is exceptional.",
     },
   ]
 

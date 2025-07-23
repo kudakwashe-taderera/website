@@ -311,8 +311,8 @@ const CompaniesSection = ({ showCount = null, showViewAll = false }: { showCount
             <div className="text-gray-600">Companies Served</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-uiuc-orange mb-2">2</div>
-            <div className="text-gray-600">Countries</div>
+            <div className="text-3xl font-bold text-uiuc-orange mb-2">5</div>
+            <div className="text-gray-600">Countries (USA, Australia, South Africa, Zimbabwe, Namibia)</div>
           </div>
           <div>
             <div className="text-3xl font-bold text-uiuc-orange mb-2">8</div>
