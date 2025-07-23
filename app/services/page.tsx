@@ -326,9 +326,9 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="container-custom text-center animate-slide-up">
-        <div className="bg-gradient-to-r from-uiuc-orange to-uiuc-blue rounded-2xl p-10 border border-uiuc-orange/20">
-          <h3 className="text-3xl font-bold mb-4 text-uiuc-blue">Let's Build Something Amazing Together</h3>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+        <div className="bg-uiuc-orange rounded-2xl p-10 border border-uiuc-orange/20">
+          <h3 className="text-3xl font-bold mb-4 text-white">Let's Build Something Amazing Together</h3>
+          <p className="text-lg text-white max-w-2xl mx-auto mb-8">
             Whether you need a complete solution or help with a specific challenge, we're here to turn your vision into reality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full">
@@ -337,9 +337,9 @@ export default function ServicesPage() {
                 key={cta.href} 
                 href={cta.href} 
                 className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-auto min-w-[220px] justify-center ${
-                  i === 0 ? 'bg-uiuc-orange text-white hover:bg-opacity-90' :
-                  i === 1 ? 'bg-uiuc-blue text-white hover:bg-opacity-90' :
-                  'border-2 border-gray-300 hover:border-uiuc-orange text-gray-700 hover:text-uiuc-orange'
+                  i === 0 ? 'bg-white text-uiuc-orange hover:bg-gray-100' :
+                  i === 1 ? 'bg-white text-uiuc-blue hover:bg-gray-100' :
+                  'border-2 border-white text-white hover:bg-white hover:text-uiuc-orange'
                 }`}
               >
                 {cta.icon}
