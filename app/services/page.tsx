@@ -148,12 +148,12 @@ export default function ServicesPage() {
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
             Comprehensive solutions tailored to elevate your business, brand, and digital strategy — crafted with precision by CodeXa.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full mb-8">
             {ctas.map((cta, i) => (
               <Link 
                 key={cta.href} 
                 href={cta.href} 
-                className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-auto min-w-[220px] justify-center ${
                   i === 0 ? 'bg-uiuc-orange text-white hover:bg-opacity-90' :
                   i === 1 ? 'bg-uiuc-blue text-white hover:bg-opacity-90' :
                   'border-2 border-gray-300 hover:border-uiuc-orange text-gray-700 hover:text-uiuc-orange'
@@ -326,17 +326,21 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="container-custom text-center animate-slide-up">
-        <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl p-10 border border-orange-100">
-          <h3 className="text-3xl font-bold mb-4 text-gray-900">Let's Build Something Amazing Together</h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        <div className="bg-gradient-to-r from-uiuc-orange to-uiuc-blue rounded-2xl p-10 border border-uiuc-orange/20">
+          <h3 className="text-3xl font-bold mb-4 text-uiuc-blue">Let's Build Something Amazing Together</h3>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
             Whether you need a complete solution or help with a specific challenge, we're here to turn your vision into reality.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {ctas.map((cta) => (
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full">
+            {ctas.map((cta, i) => (
               <Link 
                 key={cta.href} 
                 href={cta.href} 
-                className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${cta.style}`}
+                className={`inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-auto min-w-[220px] justify-center ${
+                  i === 0 ? 'bg-uiuc-orange text-white hover:bg-opacity-90' :
+                  i === 1 ? 'bg-uiuc-blue text-white hover:bg-opacity-90' :
+                  'border-2 border-gray-300 hover:border-uiuc-orange text-gray-700 hover:text-uiuc-orange'
+                }`}
               >
                 {cta.icon}
                 {cta.label}

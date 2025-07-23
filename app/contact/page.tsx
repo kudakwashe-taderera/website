@@ -627,7 +627,7 @@ export default function ContactPage() {
                             <Input 
                               placeholder="John Doe" 
                               {...field} 
-                              className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700"
+                              className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 placeholder:opacity-70 text-gray-700"
                             />
                           </FormControl>
                           <FormMessage className="text-red-500 text-sm" />
@@ -646,7 +646,7 @@ export default function ContactPage() {
                               placeholder="john@example.com" 
                               type="email" 
                               {...field} 
-                              className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700"
+                              className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 placeholder:opacity-70 text-gray-700"
                             />
                           </FormControl>
                           <FormMessage className="text-red-500 text-sm" />
@@ -666,7 +666,7 @@ export default function ContactPage() {
                             placeholder="How can I help you?"
                             {...field}
                             value={field.value || ''}
-                            className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700"
+                            className="h-12 px-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 placeholder:opacity-70 text-gray-700"
                           />
                         </FormControl>
                         <FormMessage className="text-red-500 text-sm" />
@@ -683,7 +683,7 @@ export default function ContactPage() {
                         <FormControl>
                           <Textarea
                             placeholder="Tell me about your project goals, timeline, and any specific requirements..."
-                            className="min-h-[180px] p-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 text-gray-700 resize-y"
+                            className="min-h-[180px] p-4 border-gray-300 focus:border-uiuc-orange focus:ring-2 focus:ring-uiuc-orange/20 rounded-lg transition-all duration-200 placeholder-gray-400 placeholder:opacity-70 text-gray-700 resize-y"
                             {...field}
                           />
                         </FormControl>

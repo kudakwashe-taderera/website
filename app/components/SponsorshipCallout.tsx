@@ -40,17 +40,17 @@ export default function SponsorshipCallout() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full">
             <Link
               href="/contact?type=sponsor"
-              className="inline-flex items-center px-8 py-4 bg-white text-uiuc-blue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-8 py-4 bg-white text-uiuc-blue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg w-auto min-w-[220px] justify-center"
             >
               Contact for Sponsorship
               <ArrowRight className="ml-2" size={20} />
             </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-uiuc-blue transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-uiuc-blue transition-all duration-300 transform hover:scale-105 w-auto min-w-[220px] justify-center"
             >
               View My Projects
             </Link>
