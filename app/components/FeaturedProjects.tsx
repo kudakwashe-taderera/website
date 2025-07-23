@@ -5,7 +5,7 @@ import Link from "next/link"
 import { ExternalLink, Github, ArrowRight, GraduationCap, Building, Brain, Database, Code, Laptop } from "lucide-react"
 import ProjectModal from "./ProjectModal"
 
-export default function FeaturedProjects() {
+export default function FeaturedProjects({ showCount = null, showViewAll = false }: { showCount?: number | null, showViewAll?: boolean }) {
   const [selectedProject, setSelectedProject] = useState<any>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -53,6 +53,46 @@ export default function FeaturedProjects() {
       year: "2023",
       duration: "8 months",
       teamSize: "5 developers",
+      status: "Live",
+    },
+    {
+      id: 1001,
+      title: "Shomang Zenda Projects",
+      description: "A modern, responsive website for a leading construction company, showcasing projects and enabling client engagement.",
+      detailedDescription: "Developed a professional online presence for Shomang Zenda Projects, a construction firm, featuring a portfolio of completed works, service listings, and a streamlined contact process for prospective clients. The site emphasizes trust, quality, and the company’s expertise in the construction industry.",
+      howItWorks: "Built with React and Next.js, the site features a dynamic project gallery, service pages, and a secure contact form. SEO best practices and fast load times ensure maximum visibility and user engagement.",
+      challenges: "Ensuring the site reflected the company’s credibility and handled high-resolution project images efficiently. Implemented image optimization and a robust CMS for easy updates.",
+      impact: "Increased client inquiries by 40% and improved the company’s digital reputation, leading to new business opportunities.",
+      image: "/placeholder-logo.png",
+      images: ["/placeholder-logo.png"],
+      tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+      category: "Real Estate Technology",
+      featured: true,
+      demoUrl: "https://shomang-zendaprojects.vercel.app",
+      githubUrl: "#",
+      year: "2023",
+      duration: "3 months",
+      teamSize: "1 developer",
+      status: "Live",
+    },
+    {
+      id: 1002,
+      title: "Party Fantasy Website",
+      description: "A vibrant e-commerce and event site for Party Fantasy, specializing in party packs and event planning.",
+      detailedDescription: "Created a user-friendly online store and event showcase for Party Fantasy, enabling customers to browse products, book event services, and request custom party packages. The site features secure checkout and engaging visuals tailored to the brand.",
+      howItWorks: "Utilized Shopify integration for e-commerce, React for the frontend, and Stripe for secure payments. The event gallery and booking system streamline customer engagement.",
+      challenges: "Designing a playful yet professional interface that appeals to both parents and corporate clients. Ensured mobile responsiveness and accessibility.",
+      impact: "Boosted online sales by 60% and expanded the client base to include corporate event planners.",
+      image: "/placeholder-logo.png",
+      images: ["/placeholder-logo.png"],
+      tech: ["React", "Shopify", "Stripe", "Tailwind CSS"],
+      category: "E-commerce",
+      featured: true,
+      demoUrl: "https://partyfantasyzw.com",
+      githubUrl: "#",
+      year: "2023",
+      duration: "2 months",
+      teamSize: "1 developer",
       status: "Live",
     },
     {
@@ -110,46 +150,6 @@ export default function FeaturedProjects() {
       status: "Live",
     },
     // --- New Client Projects ---
-    {
-      id: 1001,
-      title: "Shomang Zenda Projects",
-      description: "A modern, responsive website for a leading construction company, showcasing projects and enabling client engagement.",
-      detailedDescription: "Developed a professional online presence for Shomang Zenda Projects, a construction firm, featuring a portfolio of completed works, service listings, and a streamlined contact process for prospective clients. The site emphasizes trust, quality, and the company’s expertise in the construction industry.",
-      howItWorks: "Built with React and Next.js, the site features a dynamic project gallery, service pages, and a secure contact form. SEO best practices and fast load times ensure maximum visibility and user engagement.",
-      challenges: "Ensuring the site reflected the company’s credibility and handled high-resolution project images efficiently. Implemented image optimization and a robust CMS for easy updates.",
-      impact: "Increased client inquiries by 40% and improved the company’s digital reputation, leading to new business opportunities.",
-      image: "/placeholder-logo.png",
-      images: ["/placeholder-logo.png"],
-      tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-      category: "Real Estate Technology",
-      featured: true,
-      demoUrl: "#",
-      githubUrl: "#",
-      year: "2023",
-      duration: "3 months",
-      teamSize: "1 developer",
-      status: "Live",
-    },
-    {
-      id: 1002,
-      title: "Party Fantasy Website",
-      description: "A vibrant e-commerce and event site for Party Fantasy, specializing in party packs and event planning.",
-      detailedDescription: "Created a user-friendly online store and event showcase for Party Fantasy, enabling customers to browse products, book event services, and request custom party packages. The site features secure checkout and engaging visuals tailored to the brand.",
-      howItWorks: "Utilized Shopify integration for e-commerce, React for the frontend, and Stripe for secure payments. The event gallery and booking system streamline customer engagement.",
-      challenges: "Designing a playful yet professional interface that appeals to both parents and corporate clients. Ensured mobile responsiveness and accessibility.",
-      impact: "Boosted online sales by 60% and expanded the client base to include corporate event planners.",
-      image: "/placeholder-logo.png",
-      images: ["/placeholder-logo.png"],
-      tech: ["React", "Shopify", "Stripe", "Tailwind CSS"],
-      category: "E-commerce",
-      featured: true,
-      demoUrl: "#",
-      githubUrl: "#",
-      year: "2023",
-      duration: "2 months",
-      teamSize: "1 developer",
-      status: "Live",
-    },
     {
       id: 1003,
       title: "Zitheka Law Assist",
@@ -253,6 +253,8 @@ export default function FeaturedProjects() {
     },
   ]
 
+  const displayedProjects = showCount ? featuredProjects.slice(0, showCount) : featuredProjects;
+
   const handleProjectClick = (project: any) => {
     setSelectedProject(project)
     setIsModalOpen(true)
@@ -275,7 +277,7 @@ export default function FeaturedProjects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
-          {featuredProjects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <div
               key={index}
               onClick={() => handleProjectClick(project)}
@@ -342,12 +344,14 @@ export default function FeaturedProjects() {
           ))}
         </div>
 
-        <div className="text-center">
-          <Link href="/projects" className="btn-primary inline-flex items-center">
-            View All Projects
-            <ArrowRight className="ml-2" size={20} />
-          </Link>
-        </div>
+        {showViewAll && (
+          <div className="text-center mt-8">
+            <Link href="/projects" className="btn-primary inline-flex items-center">
+              View All Projects
+              <ArrowRight className="ml-2" size={20} />
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Project Modal */}

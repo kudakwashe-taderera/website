@@ -1,76 +1,83 @@
 export default function PrivacyPage() {
   return (
-    <div className="pt-20 pb-16">
-      <div className="container-custom">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
-        
+    <div className="pt-20 pb-16 bg-gradient-to-br from-gray-50 to-white min-h-screen">
+      <div className="container-custom max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold text-uiuc-orange mb-4">Privacy Policy</h1>
+        <p className="text-gray-500 mb-10 text-sm">Last updated: {new Date().toLocaleDateString()}</p>
         <div className="prose max-w-none">
-          <p className="text-lg text-gray-600 mb-8">
-            Last updated: {new Date().toLocaleDateString()}
-          </p>
-
           <section className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
             <p>
-              This Privacy Policy describes how your personal information is collected, used, and shared when you visit
-              or interact with kudakwashe-taderera.com (the "Site").
+              This Privacy Policy explains how kudakwashetaderera.me ("we", "us", or "our") collects, uses, and protects your information when you use our website.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Information We Collect</h2>
-            <p className="mb-4">
-              When you visit the Site, we automatically collect certain information about your device, including
-              information about your web browser, IP address, time zone, and some of the cookies that are installed on
-              your device.
-            </p>
-            <p>
-              Additionally, as you browse the Site, we collect information about the individual web pages that you view,
-              what websites or search terms referred you to the Site, and information about how you interact with the
-              Site.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Contact Form Information</h2>
-            <p>
-              When you submit the contact form, we collect the information you provide, including your name, email
-              address, and any other information you choose to include in your message. This information is processed
-              through Formspree and is used solely for the purpose of responding to your inquiry.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">How We Use Your Information</h2>
-            <p className="mb-4">We use the information we collect to:</p>
+            <h2 className="text-2xl font-semibold mb-4">1. Information We Collect</h2>
             <ul className="list-disc pl-6 mb-4">
-              <li>Respond to your inquiries and contact you about services you requested</li>
-              <li>Monitor and analyze trends, usage, and activities in connection with our Site</li>
-              <li>Improve our Site and services</li>
-              <li>Detect, investigate, and prevent security incidents</li>
+              <li><b>Device Information:</b> Browser, IP address, time zone, cookies, and device type.</li>
+              <li><b>Usage Data:</b> Pages visited, referring sites, and interactions with the website.</li>
+              <li><b>Contact Form Data:</b> Name, email, and message when you submit a form.</li>
             </ul>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Data Retention</h2>
+            <h2 className="text-2xl font-semibold mb-4">2. Cookies & Analytics</h2>
             <p>
-              We will maintain your information for our records unless and until you ask us to delete this information.
+              We use cookies and similar technologies to enhance your experience and analyze site usage. Analytics tools (such as Google Analytics) may collect anonymized data about your interactions with the site.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Changes</h2>
+            <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
+            <ul className="list-disc pl-6 mb-4">
+              <li>To respond to your inquiries and provide requested services</li>
+              <li>To improve our website and services</li>
+              <li>To monitor and analyze usage and trends</li>
+              <li>To ensure the security and integrity of our website</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">4. Data Security</h2>
             <p>
-              We may update this privacy policy from time to time in order to reflect changes to our practices or for
-              other operational, legal, or regulatory reasons.
+              We implement reasonable security measures to protect your information. However, no method of transmission over the Internet is 100% secure.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">5. Data Retention</h2>
+            <p>
+              We retain your information only as long as necessary to fulfill the purposes described in this policy or as required by law.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">6. Your Rights</h2>
+            <ul className="list-disc pl-6 mb-4">
+              <li>You may request access to, correction, or deletion of your personal data.</li>
+              <li>You may opt out of analytics tracking by adjusting your browser settings or using opt-out tools.</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">7. Third-Party Services</h2>
+            <p>
+              We may use third-party services (such as Formspree for contact forms) that process your data according to their own privacy policies.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">8. Changes to This Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+            <h2 className="text-2xl font-semibold mb-4">9. Contact</h2>
             <p>
-              For more information about our privacy practices, if you have questions, or if you would like to make a
-              complaint, please contact us through the contact form on our website.
+              For questions or requests regarding your privacy, please <a href="/contact" className="text-uiuc-blue underline">contact us</a>.
             </p>
           </section>
         </div>

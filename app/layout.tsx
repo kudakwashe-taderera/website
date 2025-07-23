@@ -6,7 +6,6 @@ import Navigation from "./components/Navigation"
 import Footer from "./components/Footer"
 import FloatingActionButton from "./components/FloatingActionButton"
 import { Toaster } from "./components/ui/toaster"
-import { BackToTop } from "@/components/BackToTop"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -100,7 +99,6 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
           <FloatingActionButton />
-          <BackToTop />
           <Toaster />
         </div>
       </body>

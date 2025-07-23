@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, Code, User, Briefcase, Mail, FileText, MessageSquare } from "lucide-react"
+import { Menu, X, Code, User, Briefcase, Mail, FileText, MessageSquare, Wrench } from "lucide-react"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,6 +21,7 @@ export default function Navigation() {
   const navItems = [
     { href: "/", label: "Home", icon: Code },
     { href: "/about", label: "About", icon: User },
+    { href: "/services", label: "Services", icon: Wrench },
     { href: "/projects", label: "Projects", icon: Briefcase },
     { href: "/blog", label: "Blog", icon: FileText },
     { href: "/testimonials", label: "Testimonials", icon: MessageSquare },

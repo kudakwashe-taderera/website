@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { MapPin, Users, Calendar, Phone, Building, Landmark, ShoppingCart, Activity, Tv, Server, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 interface Company {
   name: string
@@ -21,7 +22,7 @@ interface Tab {
   count: number
 }
 
-const CompaniesSection = () => {
+const CompaniesSection = ({ showCount = null, showViewAll = false }: { showCount?: number | null, showViewAll?: boolean }) => {
   const [activeTab, setActiveTab] = useState<string>("all")
 
   const companies: Company[] = [
@@ -195,6 +196,7 @@ const CompaniesSection = () => {
     if (activeTab === "south-africa") return company.country === "South Africa"
     return false
   })
+  const displayedCompanies = showCount ? filteredCompanies.slice(0, showCount) : filteredCompanies;
 
   const handleTabClick = (tabId: string) => {
     setActiveTab(tabId)
@@ -245,7 +247,7 @@ const CompaniesSection = () => {
 
         {/* Companies Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCompanies.map((company, index) => (
+          {displayedCompanies.map((company, index) => (
             <div
               key={index}
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
@@ -292,6 +294,15 @@ const CompaniesSection = () => {
             </div>
           ))}
         </div>
+
+        {showViewAll && (
+          <div className="text-center mt-8">
+            <Link href="/companies" className="btn-primary inline-flex items-center">
+              View All Companies
+              <ArrowRight className="ml-2" size={20} />
+            </Link>
+          </div>
+        )}
 
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
