@@ -28,7 +28,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <img 
-                  src="/Kudash.jpg" 
+                  src="/Kudash.jpeg" 
                   alt="Kudakwashe Taderera" 
                   className="w-40 h-40 rounded-full border-4 border-uiuc-orange object-cover shadow-lg mx-auto"
                 />

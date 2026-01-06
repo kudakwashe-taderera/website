@@ -173,7 +173,7 @@ export default function AboutPage() {
               <div className="bg-white p-1 rounded-2xl shadow-2xl relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#FF552E] to-orange-400 rounded-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-sm"></div>
                 <img
-                  src="/Kudash.jpg"
+                  src="/Kudash.jpeg"
                   alt="Kudakwashe Taderera"
                   className="w-full h-[500px] object-cover rounded-xl mb-6"
                 />
