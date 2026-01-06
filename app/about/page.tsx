@@ -184,8 +184,8 @@ export default function AboutPage() {
                   </div>
                   <div className="text-gray-600 text-sm font-medium border-t border-gray-100 pt-3 mt-3">
                     M.S. Technology Management • University of Illinois<br />
-                    B.S. Computer Science • Software Engineering Focus<br />
-                    Urbana-Champaign, Illinois, United States
+                    B.S. Management Information Systems • Software Engineering Focus<br />
+                    Midlands State University, Zimbabwe
                   </div>
                 </div>
                 <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-md border border-gray-100 flex items-center gap-2">
