@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, Mail, Code, Database, Cpu, Layers } from "lucide-react"
+import { ArrowRight, Calendar, Mail, Code, Database, Cpu, Layers, Shield, Terminal } from "lucide-react"
 import { motion } from "framer-motion"
 import ParticlesBackground from "./ParticlesBackground"
 
@@ -53,11 +53,11 @@ export default function HeroSection() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <Code className="w-6 h-6" />
+                <Terminal className="w-6 h-6" />
                 <span>Full-Stack Engineer</span>
                 <span className="text-gray-300">|</span>
-                <Database className="w-6 h-6" />
-                <span>Data Specialist</span>
+                <Shield className="w-6 h-6" />
+                <span>Cyber Specialist</span>
               </motion.div>
             </div>
 
@@ -71,8 +71,8 @@ export default function HeroSection() {
               <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
                 As the founder and principal engineer at <span className="font-semibold text-uiuc-blue">CodeXa</span>, 
                 I architect and build high-performance software solutions that drive business growth. 
-                With 8+ years of experience, I specialize in delivering scalable web applications, 
-                data engineering platforms, and cloud-native solutions.
+                With 8+ years of experience, I specialize in full-stack engineering, delivering scalable web applications, 
+                and implementing robust cybersecurity solutions to protect digital assets and infrastructure.
               </p>
 
               <div className="flex flex-row flex-wrap gap-3 justify-center">
