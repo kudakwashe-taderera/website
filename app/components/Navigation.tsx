@@ -39,7 +39,7 @@ export default function Navigation() {
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="text-2xl font-bold gradient-text">
-            Kudakwashe Taderera
+            Kudash
           </Link>
 
           {/* Desktop Navigation */}
