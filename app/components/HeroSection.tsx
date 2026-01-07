@@ -75,21 +75,22 @@ export default function HeroSection() {
                 data engineering platforms, and cloud-native solutions.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-row flex-wrap gap-3 justify-center">
                 <a 
                   href="/contact" 
-                  className="inline-flex items-center justify-center px-8 py-3 bg-uiuc-orange text-white font-medium rounded-lg shadow-sm hover:shadow-md transition-all hover:bg-orange-600"
+                  className="inline-flex items-center justify-center px-5 py-2.5 sm:px-6 sm:py-3 bg-uiuc-orange text-white text-sm sm:text-base font-medium rounded-full shadow-sm hover:shadow-md transition-all hover:bg-orange-600 whitespace-nowrap"
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Schedule Consultation
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                  <span className="hidden sm:inline">Schedule Consultation</span>
+                  <span className="sm:hidden">Schedule</span>
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
                 <a 
                   href="/projects" 
-                  className="inline-flex items-center justify-center px-8 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg shadow-sm hover:shadow-md transition-all hover:border-uiuc-orange hover:text-uiuc-orange"
+                  className="inline-flex items-center justify-center px-5 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-300 text-gray-700 text-sm sm:text-base font-medium rounded-full shadow-sm hover:shadow-md transition-all hover:border-uiuc-orange hover:text-uiuc-orange whitespace-nowrap"
                 >
                   View My Work
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </motion.div>

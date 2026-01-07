@@ -317,13 +317,13 @@ export default function FeaturedProjects({ showCount = null, showViewAll = false
                   )}
                 </div>
 
-                <div className="flex space-x-3">
+                <div className="flex flex-row gap-2">
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
                       window.open(project.demoUrl, "_blank")
                     }}
-                    className="flex items-center space-x-2 px-4 py-2 bg-uiuc-blue text-white rounded-lg hover:bg-opacity-90 transition-colors flex-1 justify-center"
+                    className="inline-flex items-center space-x-2 px-4 py-2 bg-uiuc-blue text-white text-sm rounded-full hover:bg-opacity-90 transition-colors whitespace-nowrap"
                   >
                     <ExternalLink size={16} />
                     <span>Demo</span>
@@ -333,7 +333,7 @@ export default function FeaturedProjects({ showCount = null, showViewAll = false
                       e.stopPropagation()
                       window.open(project.githubUrl, "_blank")
                     }}
-                    className="flex items-center space-x-2 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex-1 justify-center"
+                    className="inline-flex items-center space-x-2 px-4 py-2 border border-gray-300 text-gray-700 text-sm rounded-full hover:bg-gray-50 transition-colors whitespace-nowrap"
                   >
                     <Github size={16} />
                     <span>Code</span>

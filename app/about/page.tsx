@@ -157,14 +157,14 @@ export default function AboutPage() {
                 </div>
               </div>
               
-              <div className="flex flex-wrap gap-3">
-                <a href="/contact" className="px-6 py-3 bg-[#FF552E] text-white rounded-lg font-medium hover:bg-orange-600 transition-colors flex items-center gap-2">
+              <div className="flex flex-row flex-wrap gap-3">
+                <a href="/contact" className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 bg-[#FF552E] text-white text-sm sm:text-base rounded-full font-medium hover:bg-orange-600 transition-colors whitespace-nowrap">
                   Get in Touch
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
-                <a href="/services" className="px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:border-[#FF552E] hover:text-[#FF552E] transition-colors flex items-center gap-2">
+                <a href="/services" className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 bg-white border border-gray-300 text-gray-700 text-sm sm:text-base rounded-full font-medium hover:border-[#FF552E] hover:text-[#FF552E] transition-colors whitespace-nowrap">
                   Our Services
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </div>
@@ -277,9 +277,9 @@ export default function AboutPage() {
                 <p className="text-lg mb-6">
                   CodeXa continues to push boundaries in software engineering and data science, with an expanding portfolio of platforms and client solutions that demonstrate our commitment to technological excellence and business impact.
                 </p>
-                <a href="/projects" className="inline-flex items-center px-6 py-3 bg-white text-[#FF552E] rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                <a href="/projects" className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 bg-white text-[#FF552E] text-sm sm:text-base rounded-full font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
                   View Our Projects
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               </div>
             </div>
@@ -413,9 +413,9 @@ export default function AboutPage() {
           </div>
           
           <div className="text-center mt-16">
-            <a href="/contact" className="inline-flex items-center px-6 py-3 bg-[#FF552E] text-white rounded-lg font-medium hover:bg-orange-600 transition-colors">
+            <a href="/contact" className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 bg-[#FF552E] text-white text-sm sm:text-base rounded-full font-medium hover:bg-orange-600 transition-colors whitespace-nowrap">
               Start Your Project
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </a>
           </div>
         </div>

@@ -12,20 +12,21 @@ export default function CTASection() {
             solution, or technical consultation, I'm here to help bring your vision to life.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-row flex-wrap gap-3 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-[#13294B] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 bg-white text-[#13294B] text-sm sm:text-base font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
             >
-              <MessageCircle className="mr-2" size={20} />
-              Start a Conversation
+              <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">Start a Conversation</span>
+              <span className="sm:hidden">Contact</span>
             </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#13294B] transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 border-2 border-white text-white text-sm sm:text-base font-semibold rounded-full hover:bg-white hover:text-[#13294B] transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
             >
               Explore My Work
-              <ArrowRight className="ml-2" size={20} />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
           </div>
 

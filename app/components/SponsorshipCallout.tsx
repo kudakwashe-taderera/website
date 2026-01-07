@@ -40,19 +40,20 @@ export default function SponsorshipCallout() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-stretch w-full">
+          <div className="flex flex-row flex-wrap gap-3 justify-center w-full">
             <Link
               href="/contact?type=sponsor"
-              className="inline-flex items-center px-8 py-4 bg-white text-uiuc-blue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg w-auto min-w-[220px] justify-center"
+              className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 bg-white text-uiuc-blue text-sm sm:text-base font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
             >
-              Contact for Sponsorship
-              <ArrowRight className="ml-2" size={20} />
+              <span className="hidden sm:inline">Contact for Sponsorship</span>
+              <span className="sm:hidden">Sponsor</span>
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-uiuc-blue transition-all duration-300 transform hover:scale-105 w-auto min-w-[220px] justify-center"
+              className="inline-flex items-center px-5 py-2.5 sm:px-6 sm:py-3 border-2 border-white text-white text-sm sm:text-base font-semibold rounded-full hover:bg-white hover:text-uiuc-blue transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
             >
-              View My Projects
+              View Projects
             </Link>
           </div>
         </div>
