@@ -8,8 +8,7 @@ export default function CTASection() {
         <div className="text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Build Something Amazing?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Let's collaborate on your next project. Whether you need a full-stack application, data engineering
-            solution, or technical consultation, I'm here to help bring your vision to life.
+            Let's collaborate on your next project. Whether you need a full-stack application built with Python, Django, React, and JavaScript, cybersecurity solutions, or technical consultation, I'm here to help bring your vision to life.
           </p>
 
           <div className="flex flex-row flex-wrap gap-3 justify-center">

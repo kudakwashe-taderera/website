@@ -28,7 +28,7 @@ export default function StatsSection() {
       value: 30,
       suffix: "+",
       label: "Projects Delivered",
-      description: "Full-stack, AI, and data platforms for business and education",
+      description: "Full-stack applications with Python, Django, React, JavaScript, and cybersecurity solutions",
     },
     {
       icon: Users,
@@ -42,7 +42,7 @@ export default function StatsSection() {
       value: 20,
       suffix: "+",
       label: "Technologies Mastered",
-      description: "Modern stacks: React, Node, Python, AWS, ML, and more",
+      description: "Full-stack: Python, Django, React, JavaScript, databases, plus cloud and data",
     },
     {
       icon: Zap,

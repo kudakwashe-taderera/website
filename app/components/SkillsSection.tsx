@@ -1,34 +1,46 @@
 "use client"
 
 import { useState } from "react"
-import { Code, Database, Cloud, Wrench, Brain, Palette } from "lucide-react"
+import { Code, Database, Cloud, Wrench, Brain, Palette, Shield, Terminal } from "lucide-react"
 
 export default function SkillsSection() {
   const [activeCategory, setActiveCategory] = useState(0)
 
   const skillCategories = [
     {
-      icon: Code,
-      title: "Frontend Development",
+      icon: Terminal,
+      title: "Full-Stack Development",
       color: "from-blue-500 to-purple-600",
       skills: [
+        { name: "Python", level: 95 },
+        { name: "Django", level: 93 },
         { name: "React", level: 95 },
-        { name: "Next.js", level: 90 },
-        { name: "TypeScript", level: 88 },
-        { name: "Tailwind CSS", level: 92 },
         { name: "JavaScript", level: 94 },
+        { name: "Next.js", level: 90 },
       ],
     },
     {
       icon: Database,
-      title: "Backend & Databases",
+      title: "Databases",
       color: "from-green-500 to-teal-600",
       skills: [
-        { name: "Django", level: 93 },
-        { name: "Node.js", level: 87 },
         { name: "PostgreSQL", level: 90 },
         { name: "MongoDB", level: 85 },
-        { name: "FastAPI", level: 82 },
+        { name: "SQL", level: 92 },
+        { name: "Database Design", level: 88 },
+        { name: "ORM (Django)", level: 93 },
+      ],
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      color: "from-red-500 to-orange-600",
+      skills: [
+        { name: "Security Architecture", level: 88 },
+        { name: "Secure Coding", level: 90 },
+        { name: "Authentication", level: 92 },
+        { name: "Data Protection", level: 87 },
+        { name: "Security Best Practices", level: 89 },
       ],
     },
     {
@@ -45,13 +57,13 @@ export default function SkillsSection() {
     },
     {
       icon: Brain,
-      title: "Data Engineering & ML",
+      title: "Data & Analytics",
       color: "from-purple-500 to-pink-600",
       skills: [
-        { name: "Python", level: 94 },
-        { name: "Pandas", level: 90 },
-        { name: "Power BI", level: 87 },
+        { name: "Data Processing", level: 90 },
         { name: "ETL Pipelines", level: 85 },
+        { name: "Analytics", level: 87 },
+        { name: "Power BI", level: 87 },
         { name: "BigQuery", level: 80 },
       ],
     },
@@ -87,7 +99,7 @@ export default function SkillsSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Expertise</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A comprehensive skill set spanning the entire technology stack, from user interfaces to data infrastructure
+            Specializing in full-stack engineering with Python, Django, React, JavaScript, and databases, plus cybersecurity expertise. Cloud and data capabilities available.
           </p>
         </div>
 

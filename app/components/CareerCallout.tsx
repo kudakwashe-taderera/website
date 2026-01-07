@@ -11,24 +11,24 @@ export default function CareerCallout() {
               <Code size={32} />
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Open to Software & Data Science Roles</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Open to Full-Stack Engineering & Cybersecurity Roles</h2>
 
             <p className="text-xl mb-6 opacity-90">
-              Seeking full-time, freelance, and consulting opportunities in software engineering, data science, and cloud solutions. Let's build the future together.
+              Seeking full-time, freelance, and consulting opportunities in full-stack engineering (Python, Django, React, JavaScript) and cybersecurity. Cloud and data expertise available. Let's build the future together.
             </p>
 
             <div className="space-y-3 mb-8 text-left">
               <div className="flex items-center space-x-3">
                 <CheckCircle size={20} className="text-orange-200 flex-shrink-0" />
-                <span>Full-time Software Developer & Data Scientist roles</span>
+                <span>Full-time Full-Stack Engineer & Cyber Specialist roles</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle size={20} className="text-orange-200 flex-shrink-0" />
-                <span>Freelance & Contract projects (Web, Data, AI/ML)</span>
+                <span>Freelance & Contract projects (Full-stack, Python, Django, React, Cyber)</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle size={20} className="text-orange-200 flex-shrink-0" />
-                <span>Technical consulting & cloud architecture</span>
+                <span>Technical consulting in full-stack development & security</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle size={20} className="text-orange-200 flex-shrink-0" />
@@ -75,7 +75,7 @@ export default function CareerCallout() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">30+ Projects</div>
-                  <div className="text-gray-600">Delivered (Web, Data, AI/ML)</div>
+                  <div className="text-gray-600">Delivered (Full-stack, Python, Django, React)</div>
                 </div>
               </div>
 
@@ -85,7 +85,7 @@ export default function CareerCallout() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">20+ Technologies</div>
-                  <div className="text-gray-600">Mastered (React, Python, AWS, ML)</div>
+                  <div className="text-gray-600">Mastered (Python, Django, React, JavaScript, Cyber)</div>
                 </div>
               </div>
             </div>

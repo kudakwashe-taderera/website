@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, Mail, Code, Database, Cpu, Layers, Shield, Terminal } from "lucide-react"
+import { ArrowRight, Calendar, Mail, Code, Database, Cpu, Layers, Shield, Terminal, Lock } from "lucide-react"
 import { motion } from "framer-motion"
 import ParticlesBackground from "./ParticlesBackground"
 
@@ -103,10 +103,10 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               {[
-                { icon: <Code className="w-8 h-8 text-uiuc-orange" />, title: "Web Development", desc: "React, Next.js, Node" },
-                { icon: <Database className="w-8 h-8 text-uiuc-blue" />, title: "Data Engineering", desc: "ETL, Analytics, BI" },
-                { icon: <Cpu className="w-8 h-8 text-uiuc-orange" />, title: "Cloud Architecture", desc: "AWS, GCP, Azure" },
-                { icon: <Layers className="w-8 h-8 text-uiuc-blue" />, title: "System Design", desc: "Scalable Solutions" }
+                { icon: <Terminal className="w-8 h-8 text-uiuc-orange" />, title: "Full-Stack Development", desc: "Python, Django, React, JavaScript" },
+                { icon: <Shield className="w-8 h-8 text-uiuc-blue" />, title: "Cybersecurity", desc: "Security, Protection, Defense" },
+                { icon: <Database className="w-8 h-8 text-uiuc-orange" />, title: "Databases", desc: "PostgreSQL, MongoDB, SQL" },
+                { icon: <Cpu className="w-8 h-8 text-uiuc-blue" />, title: "Cloud & Data", desc: "AWS, Cloud, Analytics" }
               ].map((item, i) => (
                 <div key={i} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all">
                   <div className="flex flex-col items-center text-center">

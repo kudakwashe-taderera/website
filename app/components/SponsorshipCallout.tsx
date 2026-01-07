@@ -10,10 +10,10 @@ export default function SponsorshipCallout() {
             <Rocket size={32} />
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner with a Software Engineer & Data Scientist</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner with a Full-Stack Engineer & Cyber Specialist</h2>
 
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Join me in building the next generation of digital solutions—spanning full-stack software, data engineering, and AI-driven platforms. Let's create real impact in education, business, and beyond.
+            Join me in building the next generation of digital solutions—specializing in full-stack engineering with Python, Django, React, and JavaScript, plus robust cybersecurity solutions. Cloud and data services available as additional capabilities.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
@@ -21,7 +21,7 @@ export default function SponsorshipCallout() {
               <DollarSign className="mx-auto mb-4 text-yellow-300" size={32} />
               <h3 className="text-lg font-semibold mb-2">Tech Investment</h3>
               <p className="text-sm opacity-80">
-                Seeking sponsors and investors for scalable software and data science projects
+                Seeking sponsors and investors for full-stack applications and cybersecurity solutions
               </p>
             </div>
 
@@ -29,14 +29,14 @@ export default function SponsorshipCallout() {
               <Handshake className="mx-auto mb-4 text-green-300" size={32} />
               <h3 className="text-lg font-semibold mb-2">Strategic Collaboration</h3>
               <p className="text-sm opacity-80">
-                Collaborate on innovative platforms, SaaS, and AI/data-driven solutions
+                Collaborate on innovative platforms built with Python, Django, React, and secure architectures
               </p>
             </div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
               <Code className="mx-auto mb-4 text-uiuc-orange" size={32} />
-              <h3 className="text-lg font-semibold mb-2">Innovation in Software & Data</h3>
-              <p className="text-sm opacity-80">Empowering businesses and learners with modern technology</p>
+              <h3 className="text-lg font-semibold mb-2">Full-Stack & Security</h3>
+              <p className="text-sm opacity-80">Empowering businesses with modern full-stack engineering and cybersecurity</p>
             </div>
           </div>
 

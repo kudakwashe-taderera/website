@@ -4,28 +4,28 @@ import Link from "next/link";
 const summaryServices = [
   {
     icon: <Wrench className="w-8 h-8 text-uiuc-orange" />,
-    title: "Software Engineering",
-    desc: "Full-stack web, custom apps, APIs, and mobile-responsive design.",
+    title: "Full-Stack Engineering",
+    desc: "Python, Django, React, JavaScript, and database solutions.",
   },
   {
     icon: <Globe className="w-8 h-8 text-uiuc-blue" />,
-    title: "Website & Branding",
-    desc: "UI/UX, redesigns, hosting, and business/personal sites.",
+    title: "Cybersecurity",
+    desc: "Security solutions, protection, and defense strategies.",
   },
   {
     icon: <Palette className="w-8 h-8 text-purple-600" />,
-    title: "Creative & Branding",
-    desc: "Logos, social banners, brand kits, and print materials.",
+    title: "Web Development",
+    desc: "Custom apps, APIs, and mobile-responsive design.",
   },
   {
     icon: <BarChart2 className="w-8 h-8 text-green-600" />,
-    title: "Digital Marketing",
-    desc: "Social media, ads, content planning, and analytics.",
+    title: "Cloud Solutions",
+    desc: "AWS, cloud architecture, and scalable infrastructure.",
   },
   {
     icon: <Layers className="w-8 h-8 text-indigo-600" />,
     title: "Data Services",
-    desc: "ETL, dashboards, data science, and automation.",
+    desc: "ETL, dashboards, analytics, and automation.",
   },
 ];
 
